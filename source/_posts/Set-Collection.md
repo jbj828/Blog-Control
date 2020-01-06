@@ -2,7 +2,7 @@
 title: Set Collection
 date: 2020/1/6 13:46:25
 tags: [java, masterclass]
-categories: [Java, masterclass]
+categories: [Java, Masterclass]
 thumbnail: ''
 permalink: ''
 ---
