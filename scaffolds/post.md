@@ -9,6 +9,8 @@ thumbnail: ""
 permalink: ""
 ---
 
+{% asset_img "jsp-session-study.png" 500 300 "title" %}
+
 (출처 : Udemy Programming masterclass for software developers)
 
 

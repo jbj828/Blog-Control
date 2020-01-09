@@ -1,9 +1,9 @@
 ---
 date: '2020/1/7 20:46:25'
 tags:
-  - java, masterclass
+  - java
 categories:
-  - Java, Masterclass, challenge
+  - Java
 thumbnail: ''
 permalink: ''
 title: Basket Challenge

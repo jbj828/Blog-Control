@@ -2,10 +2,8 @@
 date: '2020/1/6 18:46:25'
 tags:
   - java
-  - masterclass
 categories:
   - Java
-  - Masterclass
 thumbnail: ''
 permalink: ''
 title:  Set Challenge

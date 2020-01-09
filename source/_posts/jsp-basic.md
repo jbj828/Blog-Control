@@ -1,9 +1,9 @@
 ---
 date: '2020/1/7 23:46:25'
 tags:
-  - til
+  - jsp
 categories:
-  - TIL
+  - JSP
 thumbnail: ''
 permalink: ''
 title: JSP Scripting Elements

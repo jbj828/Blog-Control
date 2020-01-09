@@ -2,12 +2,8 @@
 date: '2020/1/9 10:50:25'
 tags:
   - jsp
-  - java
-  - til
 categories:
   - JSP
-  - Java
-  - TIL
 thumbnail: ''
 permalink: ''
 title: JSP Cookies
@@ -17,6 +13,8 @@ Personalize content with Cookie
 
 cookies-homepage.jsp
 {% codeblock lang:java %}
+<%@ page import="java.net.URLDecoder" %>
+
 <html>
 <head><title>Homepage</title></head>
 
@@ -33,7 +31,7 @@ cookies-homepage.jsp
 		for(Cookie tempCookie : theCookies){
 			
 			if("myApp.favoriteLanguage".equals(tempCookie.getName())){
-				favLang = tempCookie.getValue();
+				favLang = URLDecoder.decode(tempCookie.getValue(), "UTF-8");
 				break;
 			}
 		}
@@ -91,6 +89,8 @@ cookies-personalize-form.html
 
 cookies-personalize-response.jsp
 {% codeblock lang:java %}
+<%@ page import="java.net.URLEncoder" %>
+
 <html>
 <head><title>Personalize response</title></head>
 
@@ -99,6 +99,8 @@ cookies-personalize-response.jsp
 
 <%
 	String favLang = request.getParameter("favoriteLanguage");
+
+	favLang = URLEncoder.encode(favLang, "UTF-8");
 
 	Cookie theCookie = new Cookie("myApp.favoriteLanguage", favLang);
 	

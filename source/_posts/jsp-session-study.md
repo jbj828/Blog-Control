@@ -2,18 +2,21 @@
 date: '2020/1/8 22:46:25'
 tags:
   - jsp
-  - java
-  - til
 categories:
   - JSP
-  - Java
-  - TIL
 thumbnail: ''
 permalink: ''
 title: Session example
 ---
 
 Tracking user actions with session
+
+
+#### Result
+{% asset_img "jsp-session-study.png" 500 300 "title" %}
+
+
+
 
 {% codeblock lang:java %}
 <%@ page import="java.util.*" %>

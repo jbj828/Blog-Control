@@ -1,13 +1,9 @@
 ---
 date: '2020/1/8 23:36:25'
 tags:
-  - java
   - jsp
-  - til
 categories:
-  - Java
   - JSP
-  - TIL
 thumbnail: ''
 permalink: ''
 title: JSP Session object
