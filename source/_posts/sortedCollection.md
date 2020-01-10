@@ -9,8 +9,9 @@ permalink: ''
 title: Basket Challenge
 ---
 
+Basket Challenge
 
-
+<!-- excerpt -->
 ### Main.java
 {% codeblock lang:java %}
 package com.chung;

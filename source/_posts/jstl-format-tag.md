@@ -15,6 +15,8 @@ title: Build a multi-lingual App
 
 * 다국어 처리, 날짜 숫자를 formatting 할 경우 format tag 사용하면 편하다.
 
+<!-- excerpt -->
+
 #### Multi-lingual App
 
 i18n-messages.jsp
@@ -91,5 +93,5 @@ label.firstname=Vorname
 label.lastname=Nachname
 label.welcome=Willkommen beim App Transer.
 {% endcodeblock %}
-<!-- excerpt -->
+
 <!-- toc -->

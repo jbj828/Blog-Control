@@ -9,7 +9,7 @@ permalink: ''
 title: equals()메소드와 hashcode()메소드
 ---
 
-## equals() 메서드와 비교연산자 == 의 차이
+#### equals() 메서드와 비교연산자 == 의 차이
 
 {% codeblock lang:java %}
 String a = new String("java");
@@ -20,7 +20,9 @@ a.equals(b)  //true
 {% endcodeblock %}
 equals() 메서드는 는 값의 동등성만 확인한다.
 
-## hashcode()
+<!-- excerpt -->
+
+#### hashcode()
 
 "return a hashcode value for the object.
 This method is supported for the benefit of hash tables 
