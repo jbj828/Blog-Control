@@ -14,7 +14,7 @@ title: JSP Session object
 1. JSP session is created once for user's browser session unique for this user.
 2. Commonly used when you need to keep track of the user's actions. ex)shopping cart, online banking.
 
-<!-- excerpt -->
+<!-- more -->
 
 * cookie : 웹 브라우저에 사용자의 상태를 유지하기 위한 정보 저장
 * session : 웹 서버쪽의 웹 컨테이너에 상태를 유지하기 위한 정보 저장

@@ -14,7 +14,7 @@ JSP, Servlet 공부를 시작했다.
 
 HTML과 JSP를 연동해서 하나의 웹을 만들 수 있다는 것에 벅찼다.
 
-<!-- excerpt -->
+<!-- more -->
 
 ### Web Applications?
 "A website where the HTML pages are generates dynamically based on the user's actions."
@@ -37,5 +37,5 @@ JSP Declarations
 <%! ~~~~~~~ %>
 {% endcodeblock %}
 
-<!-- excerpt -->
+
 <!-- toc -->

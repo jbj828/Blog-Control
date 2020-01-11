@@ -20,7 +20,7 @@ a.equals(b)  //true
 {% endcodeblock %}
 equals() 메서드는 는 값의 동등성만 확인한다.
 
-<!-- excerpt -->
+<!-- more -->
 
 #### hashcode()
 
@@ -56,5 +56,5 @@ hashcode 메서드 재정의 : 같은 String 객체(equals() 리턴값 true) => 
 
 
 
-<!-- excerpt -->
+
 <!-- toc -->

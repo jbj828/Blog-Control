@@ -13,7 +13,8 @@ Set의 특징
 
 데이터를 검색하기 위해서는 iterator() 메서드로 Iterator(반복자)를 생성하고 데이터를 가져와야 한다.
 
-<!-- excerpt -->
+
+<!-- more -->
 
 
 Collection c 가 있다고 하자.

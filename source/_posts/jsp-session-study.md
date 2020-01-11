@@ -12,7 +12,8 @@ title: Session example
 Tracking user actions with session
 
 
-<!-- excerpt -->
+
+<!-- more -->
 
 #### Result
 {% asset_img "jsp-session-study.png" 500 300 "title" %}

@@ -14,7 +14,8 @@ set Challenge
 (출처 : Udemy Programming masterclass for software developers)
 
 
-<!-- excerpt -->
+
+<!-- more -->
 -Main
 {% codeblock lang:java %}
 package com.timbuchalka;

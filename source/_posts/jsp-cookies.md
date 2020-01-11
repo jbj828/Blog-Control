@@ -11,8 +11,7 @@ title: JSP Cookies
 
 Personalize content with Cookie
 
-
-<!-- excerpt -->
+<!-- more -->
 cookies-homepage.jsp
 {% codeblock lang:java %}
 <%@ page import="java.net.URLDecoder" %>
@@ -123,5 +122,5 @@ cookies-personalize-response.jsp
 </html>
 {% endcodeblock %}
 
-<!-- excerpt -->
+
 <!-- toc -->

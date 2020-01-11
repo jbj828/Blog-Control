@@ -11,7 +11,7 @@ title: Basket Challenge
 
 Basket Challenge
 
-<!-- excerpt -->
+<!-- more -->
 ### Main.java
 {% codeblock lang:java %}
 package com.chung;
@@ -308,5 +308,4 @@ public class Basket {
 
 (출처 : Udemy Programming masterclass for software developers)
 
-<!-- excerpt -->
 <!-- toc -->

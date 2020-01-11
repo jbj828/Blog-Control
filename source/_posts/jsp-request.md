@@ -15,7 +15,7 @@ title: JSP 내장객체
 
 이번 예는 request 를 중심으로 만든 회원가입 페이지이다.
 
-<!-- excerpt -->
+<!-- more -->
 
 Result
 
