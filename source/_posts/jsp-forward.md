@@ -16,7 +16,7 @@ title: JSP forward action tag
 * <jsp:forward> 액션태그
 
 <!-- more -->
-
+  
 forward 액션 태그는 다른 페이지로 프로그램의 제어를 이동할 때 사용되는 액션 태그
 JSP 페이지 내에 forward 액션 태그를 만나게 되면, 그전까지 출력 버퍼에 저장되어 있던 내용을 제거하고 forward 액션 태그가 지정하는 페이지로 이동한다.
 
