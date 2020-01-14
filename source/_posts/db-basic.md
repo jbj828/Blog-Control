@@ -1,9 +1,9 @@
 ---
 date: '2020/1/14 14:46:25'
 tags:
-  - database
+  - database, MySQL
 categories:
-  - Database
+  - Database, MySQL
 thumbnail: ''
 permalink: ''
 title: DataBase Basic
@@ -29,6 +29,11 @@ title: DataBase Basic
   * 구조질의어 형식(SQL문) DB관리 시스템
 
 
+* MySQL 명령어
+  * show database : 데이터베이스의 목록을 조회한다
+  * use 데이터베이스명 : 지정 된 데이터베이스를 사용한다
+  * show tables : 테이블들의 목록을 조회한다
+  * desc tables : 테이블의 정보를 조회한다
 
 
 
