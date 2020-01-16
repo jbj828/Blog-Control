@@ -20,7 +20,7 @@ show tables;
 rename table test_table1 to test_table3;
 show tables;
 
--- alter
+-- 속성변경
 desc test_table3;
 alter table test_table3 modify data1 int(100);
 desc test_table3;
