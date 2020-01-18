@@ -11,7 +11,7 @@ title: sequence, limit, view
 
 * sequence
   * 로우를 추가할 때 자동으로 증가하는 값이 저장되는 것을 시퀀스라고 부른다
-  * 시퀀스는 데이터베이스 별 사용하는 방법이 다르므로 반드시 파악
+  * 시퀀스는 데이터베이스 별 사용하는 방법이 다르므로 반드시 파악.
  <!-- more -->
   * mysql은 auto_increment 키워드를 설정해주면 된다.
   * 데이터를 insert 할 때 auto_increment를 설정한 컬럼은 제외한다
