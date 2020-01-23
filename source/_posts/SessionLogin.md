@@ -9,7 +9,7 @@ permalink: ''
 title: Session Login Form
 ---
 
-세션을 이용한 로그인 폼 작성법
+Session 을 이용한 로그인 폼 작성법
 
 <!-- more -->
 
