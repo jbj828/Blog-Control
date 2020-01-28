@@ -14,25 +14,5 @@ title: Model 2 - Expression language
   * attribute 를 출력할 때는 ${애트리뷰트 이름} 으로 출력
   * 파라미터는 ${param.이름} 또는 ${paramValue.이름[idx]} 의 형태로 출력
 
-
-
-
 <!-- more -->
 
-
-{% asset_img "jsp-session-study.png" 500 300 "title" %}
-
-(출처 : Udemy Programming masterclass for software developers)
-
-
-{% codeblock lang:java %}
-{% endcodeblock %}
-
-{% codeblock lang:java %}
-{% endcodeblock %}
-
-{% codeblock lang:java %}
-{% endcodeblock %}
-
-<!-- excerpt -->
-<!-- toc -->
