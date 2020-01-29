@@ -42,4 +42,58 @@ fib(n)
   }
 ```
 
+* Time Complexity of Recursive Algo
+
+  * Problem statement : Given a sorted array of 11 numbers, find number 110
+      10 20 30 40 50 ... 90 100 110
+
+  * Solution
+
+```
+BinarySearch(int findNumber, int arr[], start, end):  ----- T(n)
+  if(start equals end){
+    if(arr[start] equals findNumber){
+        return findNumber
+    } else{
+        return error message that number does not exist in the array
+    }
+  } 
+
+  mid = findMid(arr[], start, end)  
+    if(mid > findNumber){
+      BianarySearch(int Number, int arr[], start, mid);  -------- T(n/2)
+    }else if( mid < findNumber){
+      BinarySearch(int Number, int arr[], mid, end);  ----------- T(n/2)
+    }else if(mid = findNumber){
+      return mid;
+    }
+```
+
+* Time Complexity:
+T(n) = O(1) + T(n/2)
+
+* Back Substitution : 
+    * T(n) = T(n/2) + 1 ------- Equation #1
+    * T(1) = 1         -------- Base Condition
+    * T(n/2) = T(n/4) + 1 ------Equation #2
+    * T(n/4) = T(n/8) + 1 ------Equation #3
+  
+
+  T(n) = T(n/2) + 1
+       = (T(n/4) + 1) + 1
+       =  T(n/4) + 2
+       = (T(n/8) + 1) + 2
+       = T(n/8) + 3
+       = T(n/2^k) + k 
+
+
+       n/2^k = 1
+           n = 2^k
+           k = log n
+
+
+       = T(1) + log n
+       = 1 + log n
+       = log n
+
 
