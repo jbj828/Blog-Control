@@ -26,12 +26,13 @@ title: Two Dimension Array
     * a[0][1]=20;
     * a[0][2]=30;
     * a[1][0]=40;
-      .....
+      ....
 
 
   * Declaring, instanciating, initializing -----------O(1)
+    ```
     * int[][] arr = {{1,2,3},{4,5,6}};  
-
+    ```
 
 * When to Use/Avoid Array
   * When to use
