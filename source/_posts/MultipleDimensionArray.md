@@ -31,3 +31,13 @@ title: Two Dimension Array
 
   * Declaring, instanciating, initializing -----------O(1)
     * int[][] arr = {{1,2,3},{4,5,6}};  
+
+
+* When to Use/Avoid Array
+  * When to use
+      * When there is a need to store multiple similar type of data
+      * When random access is regular affair(접근할 때 바로 인덱스 넣으면 접근가능하기에 time complexity가 O(1)이다)
+
+  * When to avoid
+      * Data to be stored are non-homogenous(데이터 종류가 같지 않을 경우)
+      * When number of data to be stored is not known in advance.
