@@ -50,5 +50,3 @@ __Components of Linked List__
   * The only change that occurs is that the end of the given list is linked back to the front of the list and vice versa.
   {% asset_img "circularDouble.PNG" "circular double linked list" %}
 
-
-  
