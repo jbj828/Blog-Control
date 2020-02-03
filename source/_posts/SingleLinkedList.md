@@ -1,9 +1,9 @@
 ---
 date: '2020/2/1 15:23:25'
 tags:
-  - Algorithm
+  - algorithm
 categories:
-  - Alogrithm
+  - Algorithm
 thumbnail: ''
 permalink: ''
 title: Single Linked List

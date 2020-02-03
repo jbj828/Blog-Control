@@ -1,9 +1,9 @@
 ---
 date: '2020/1/30 18:46:25'
 tags:
-  - Algorithm
+  - algorithm
 categories:
-  - Alogrithm
+  - Algorithm
 thumbnail: ''
 permalink: ''
 title: Linked List

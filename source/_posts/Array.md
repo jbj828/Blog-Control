@@ -1,9 +1,9 @@
 ---
 date: '2020/1/29 13:46:25'
 tags:
-  - Algorithm
+  - algorithm
 categories:
-  - Alogrithm
+  - Algorithm
 thumbnail: ''
 permalink: ''
 title: Basic Array Theory and Single Dimension Array
