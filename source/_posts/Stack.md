@@ -26,6 +26,18 @@ __Implementation options of Stack__
     * pros : Variable size
     * cons : Moderate in implementation
 
+<br>
+<br>
+
+__When to use / avoid Stack__
+<br>
+ * When to use
+   * Helps manage the data in particular way(LIFO)
+   * Cannnot be easily corrupted(No one can insert data in middle)
+<br>
+ * When to avoid
+   * Random access not possible - if we have done some mistake, its costly to rectify.
+
 <br><br>
 
 __Stack By Array__
