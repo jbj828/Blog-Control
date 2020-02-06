@@ -10,7 +10,7 @@ title: Stack
 ---
 
 
-
+Stack data structure
 
 <!-- more -->
 

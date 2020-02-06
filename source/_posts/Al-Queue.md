@@ -9,7 +9,7 @@ permalink: ''
 title: Queue
 ---
 
-
+Queue
 
 <!-- more -->
 
