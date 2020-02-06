@@ -23,6 +23,27 @@ __Why learn Circular Queue?__
 
 <br><br>
 
+__time / space complexity__
+
+* Array는 만들 때 space complexity가 O(n) 나머지 메서드는 모두 O(1)
+* Linked List는 모든 메서드 O(1)
+<br>
+그러므로 Queue를 사용하고자 한다면 Linked List가 Space Complexity에서 낫기 때문에 Linked List사용하도록 한다
+
+<br><br>
+
+__When to Use / Avoid Queue__
+
+* When to Use
+  * Helps manage the data in particular way(FIFO)
+  * Not easily corrupted(No one can easily insert data in middle)
+<br>
+
+* When to Avoid
+  * Random access not possible - if we have done some mistake, it is costly to rectify
+
+<br><br>
+
 __Circular Queue Coding__
 
 CircularQueueByArray.java
