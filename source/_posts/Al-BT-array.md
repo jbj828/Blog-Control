@@ -83,3 +83,74 @@ searchValueInBinaryTree()
 
 <br>
 
+__In-Order Traversal__
+
+
+```
+InorderTraversal(index)
+  if index > lastUsedIndex
+      return
+  else
+    InorderTraversal(index*2)
+    print current index.value
+    InorderTraversal(index*2 + 1)
+```
+
+<br>
+
+* Time Complexity : O(n)
+* Space Complextiy : O(n) ---- stack에 쌓이기 때문에
+
+<br>
+
+__Levle-Order Traversal__
+
+
+```
+levelOrderTraversal()
+  loop: 1 to lastUsedIndex
+    print current index.value
+```
+
+<br>
+
+* Time Complexity : O(n)
+* Space Complextiy : O(1) 
+
+<br>
+
+__Deletion of Node__
+
+* Deletion
+  * When the value to be deleted is not existing in the tree
+  * When the value to be deleted is exists in the tree
+
+```
+deleteNodeFromBinaryTree()
+  search for desired value in array
+    if value found
+      replace this cell's value with last cell and update lastUsedIndex
+  return error message
+```
+
+<br>
+
+* Time Complexity : O(n)
+* Space Complextiy : O(1) 
+
+<br>
+
+__Delete Binary Tree__
+
+
+```
+deleteBinaryTree()
+  set array as null
+```
+
+<br>
+
+* Time Complexity : O(1)
+* Space Complextiy : O(1) 
+
+<br>
