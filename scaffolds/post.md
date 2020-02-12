@@ -14,19 +14,14 @@ permalink: ""
 <!-- more -->
 
 
+
+
+출처 : "Data Structures & Algorithms" by DS GUY
+
+
 {% asset_img "jsp-session-study.png" 500 300 "title" %}
 
-(출처 : Udemy Programming masterclass for software developers)
 
-
-{% codeblock lang:java %}
-{% endcodeblock %}
-
-{% codeblock lang:java %}
-{% endcodeblock %}
-
-{% codeblock lang:java %}
-{% endcodeblock %}
 
 <!-- excerpt -->
 <!-- toc -->
