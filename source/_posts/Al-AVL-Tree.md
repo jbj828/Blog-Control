@@ -151,5 +151,104 @@ leftRotate(currentDisabledNode)
 
 <br>
 
+__Insertion Algorithm in AVL Tree__
+
+```
+Node Insert(Node root, int data)
+  if(root == null) return new Node(data)
+  else if(data <= root.data) root.left = insert(root.left, data)
+  else root.right = insert(root.right, data)
+  
+  int balance = height(root.left) - height(root.right)
+  if(balance > 1)
+    if height(root.left.left) >= height(root.left.right)
+      RightRotation(root) //LL condition
+    else
+      LeftRotation(root.left)
+      RightRotation(root)  // LR condition
+
+  else if(balance < -1)  // if right subtree is overloaded
+    if height(root.right.right) >= height(root.right.left)
+      LeftRotation(root)  // RR condition
+    else
+      RightRotation(root.right)
+      LeftRotation(root)  // RL condition
+  
+  root.height = max(root.left, root.right) + 1
+  return root
+```
+
+<br>
+
+* Time Complexity - O(log n)
+* Space Complexity - O(log n)
+
+
+
+<br>
+
+#### Deletion of Node from AVL Tree
+
+* Deletion of a node
+  * Case#1 - When tree does not exists
+  * Case#2 - When 'rotation' is not required(BST Conditions)
+      * Node to be deleted is leaf node
+      * Node to be deleted is having 1 child
+      * Node to be deleted has 2 children
+  * Case#3 - When 'rotation' is required(LL, LR, RR, RL)
+
+<br>
+
+```
+deleteNodeOfAVL(currentNode, valueToBeDeleted)
+  if(currentNode == null) return null;
+
+  if(valueToBeDeleted < currentNode.value)
+    then currentNode.left = deleteNodeOfAVL(currentNode.left, valueToBeDeleted)
+  else if(valueToBeDeleted > currentNode.value)
+    then currentNode.right = deleteNodeOfAVL(currentNode.right, valueToBeDeleted)
+  else  //if the currentNode is the node to be deleted
+      if currentNode have both children, then find minimum element from right subtree(Case#3)
+          replace current node with minimum node from right subtree and delete minimum node from right
+
+      else if nodeToBeDeleted has only left child(Case#2)
+            then currentNode = currentNode.left
+      else if nodeToBeDeleted has only right child
+      (Case#2)
+            then currentNode = currentNode.right
+      
+      else //if nodeToBeDeleted do not have child(Case#1)
+            currentNode = null;
+
+  int balance = checkBalance(currentNode.left, currentNode.right);
+
+  if(balance > 1)
+      if(checkBalance(currentNode.left().left(), currentNode.left().right()) > 0)
+          currentNode = rightRotate(currentNode); //LL Condition
+      
+      else 
+          currentNode.left = leftRotate(currentNode.left);
+          currentNode = rightRotate  //LR condition
+    
+    else if(balance < -1)
+      if(checkBalance(currentNode.right().right(), currentNode.right().left()) > 0)
+          currentNode = leftRotate(currentNode); //RR Condition
+
+      else 
+          currentNode.right = rightRotate(currentNode.right); //RL condition
+          currentNode = leftRotate(currentNode);
+
+  if(currentNode.left() != null) then currentNode.left().setHeight(calculateHeight(currentNode.left));
+  if(currentNode.right() != null) then currentNode.right().setHeight(calculateHeight(currentNode.right());
+  currentNode.setHeight(calculateHeight(currentNode));
+
+  return currentNode;      
+```
+
+<br>
+
+* Time Complexity - O(log n)
+* Space Complexity - O(log n)
+
 
 출처 : "Data Structures & Algorithms" by DS GUY
