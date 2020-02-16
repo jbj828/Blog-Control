@@ -19,13 +19,16 @@ __What is Binary Heap__
 
 * Definition : Binary Heap is a Binary Tree with some special properties.
   <br>
+
   1. Heap property
-      * Value of any given node must be <= value of its children(Min-Heap)
-      * Value of any given node must be >= value of its children(Max-Heap)
+
+    * Value of any given node must be <= value of its children(Min-Heap)
+    * Value of any given node must be >= value of its children(Max-Heap)
   <br>
   2. Complete tree
-      * All levels are completely filled except possibly the last level and the last level has all keys as left as possible.
-      * This makes Binary Heap ideal candidate for Array Implementation.
+
+    * All levels are completely filled except possibly the last level and the last level has all keys as left as possible.
+    * This makes Binary Heap ideal candidate for Array Implementation.
 
 <Br>
 
@@ -36,6 +39,7 @@ There are cases when we want to find 'min/max' number among set of numbers in lo
 <br>
 
 * Possible Solutions:
+ 
   1. Store the numbers in sorted Array <- Take O(n) time complexity
   2. Store the numbers in Linked List in sorted manner <- Take O(n) time complexity
 
