@@ -9,7 +9,7 @@ permalink: ''
 title: Hashing - Direct Chaining Coding
 ---
 
-
+Direct Chaning Coding by Hashing 
 
 <!-- more -->
 <Br>
