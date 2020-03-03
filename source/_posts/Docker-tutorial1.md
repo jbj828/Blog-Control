@@ -6,7 +6,7 @@ categories:
   - Docker
 thumbnail: ''
 permalink: ''
-title: Docker Tutorial 
+title: Install AWS EC2 Instance and Jupyter Notebook(환경설정) 
 ---
 
 Docker Tutorial 1
@@ -131,23 +131,68 @@ Docker Tutorial 1
   5. sudo openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout "cert.key" -out "cert.pem" -batch     *개인키 공개키 생성*
   6. ls
   7. sudo vi 바로 윗줄 환경설정 다시 열기
-          * ex)  sudo vi /home/ubuntu/.jupyter/jupyter_notebook_config.py 
-            *  *방향키 위쪽 버튼 눌러서 찾기*
+  ex)  sudo vi /home/ubuntu/.jupyter/jupyter_notebook_config.py 
+    *방향키 위쪽 버튼 눌러서 찾기*
   8. 'a'눌러서 시작
   9. c.NotebookApp.certfile = u'/home/ubuntu/ssl/cert.pem'
-  10. c.NotebookApp.keyfile = u'/home/ubuntu/ssl/cert.key'
+  10. c.Notebop.keyfile = u'/home/ubuntu/ssl/cert.key'
   11. esc버튼
   12. :wq!
 
 <Br>
 
   1. sudo jupyter-notebook --allow-root   *주피터 노트북 실행*
-  2. 
+  
+      * https://주소:8888 넣으면 ssl이 적용이 된 상태로 서버에 접속가능
+      * 여기까지가 우리 주피터 노트북에 ssl(인증서)까지 적용한 것
 
+<br>
 
-출처 : "Data Structures & Algorithms" by DS GUY
+### 시스템 서비스 설정하기
 
+  * 서버가 재부팅되면 자동으로 주피터 노트북이 실행이 안됨. 그래서 주피터 노트북을 시스템 서비스로서 등록시켜서 재부팅해도 자동실행 가능하도록 함.
 
-{% asset_img "jsp-session-study.png" 500 300 "title" %}
+<br>
+
+  1. 먼저 ctrl+c 눌러서 서버 구동 종료
+  2. which jupyter-notebook    *주피터 노트북 실행파일의 경로를 찾기 위한 명령*
+  3. sudo vi /etc/systemd/system/jupyter.service    *시스템 서비스로 등록하기 위해 서비스 파일 작성*
+  4. *서비스 파일 작성*
+  ```
+  [Unit]
+  Description=Jupyter Notebook Server
+
+  [Service]
+  Type=simple
+  User=ubuntu  //기본적으로 AWS ec2에 ssh명령을 이용해서 접속할 땐 ubuntu계정으로 접속하기 때문
+  ExecStart=/usr/bin/sudo /usr/local/bin/jupyter-notebook --allow-root --config=/home/ubuntu/.jupyter/jupyter_notebook_config.py
+
+  [Install]
+  WantedBy=multi-user.target
+  ```
+  :wq!입력
+
+  <br>
+
+  *주피터 노트북을 구동시키도록 함*
+  1. sudo systemctl daemon-reload *데몬을 다시 로드할수 있도록*
+  2. sudo systemctl enable jupyter *주피터서비스를 사용가능하도록 만듦* 
+  3. sudo systemctl start jupyter  *항상 실행상태가 되도록 만듦*
+
+<br>
+
+  * 실행 중인 주피터 서비스를 확인
+      1. sudo systemctl status jupyter
+      2. 확인 후 'q'눌러서 상태확인 마침
+   
+   <br>
+
+  * 주피터 서비스를 다시 시작하고자 할 때
+      1. sudo systemctl restart jupyter
+
+<br>
+
+이제 aws ec2를 재부팅하더라도 주피터 노트북 서비스가 자동으로 실행되어서 구동중인 상태가 될 수 있도록 처리한 것. 항상 주피터를 이용해서 해당 서버에 접속해 관리할 수 있도록 된 것.
+
 
 
