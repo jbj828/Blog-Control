@@ -17,7 +17,7 @@ Docker Tutorial 1
 
 <Br>
 
-  1. AWS에서 ubuntu 18버전으로 먼저 인스턴슷 생성
+  1. AWS에서 ubuntu 18버전으로 먼저 인스턴스 생성
   2. key pair는 관리자만 실행가능하도록 환경설정
       * 오른쪽마우스 -> 속성 -> 보안 -> 고급 -> 상속사용
       * key pair는 무조건 C드라이브 안에 넣기
@@ -25,7 +25,7 @@ Docker Tutorial 1
       * cd 키페어 위치
       * aws 홈페이지 가서 연결버튼 누름
       * ssh 링크 복사해서 cmd에 복사
-      * 연결완료 되면 pwd 입력 -> 현재 서버위치
+      * 연결완료 되면 pwd 입력 -> `현재 서버위치`
 
 <br>
 
@@ -113,6 +113,37 @@ Docker Tutorial 1
   2. sudo kill -9 '파이썬 옆 숫자'
       * 해당 주피터 노트북을 종료시킬 수 있음
       * 웹브라우저에서 새로고침하면 적용 안 됨
+
+<br>
+
+### HTTPS 적용
+
+<br>
+
+*환경설정에 개인키와 공개키를 넣는 작업*
+
+<br>
+
+  1. cd /home/ubuntu
+  2. pwd
+  3. mkdir ssl
+  4. cd ssl
+  5. sudo openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout "cert.key" -out "cert.pem" -batch     *개인키 공개키 생성*
+  6. ls
+  7. sudo vi 바로 윗줄 환경설정 다시 열기
+          * ex)  sudo vi /home/ubuntu/.jupyter/jupyter_notebook_config.py 
+            *  *방향키 위쪽 버튼 눌러서 찾기*
+  8. 'a'눌러서 시작
+  9. c.NotebookApp.certfile = u'/home/ubuntu/ssl/cert.pem'
+  10. c.NotebookApp.keyfile = u'/home/ubuntu/ssl/cert.key'
+  11. esc버튼
+  12. :wq!
+
+<Br>
+
+  1. sudo jupyter-notebook --allow-root   *주피터 노트북 실행*
+  2. 
+
 
 출처 : "Data Structures & Algorithms" by DS GUY
 
