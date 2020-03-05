@@ -6,7 +6,7 @@ categories:
   - Docker
 thumbnail: ''
 permalink: ''
-title: Making MySQL container with Docker
+title: Connecting MySQL Container and PHP Container
 ---
 
 PHP 컨테이너와 MySQL 컨테이너 연동해보기
