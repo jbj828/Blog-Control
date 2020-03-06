@@ -2,8 +2,10 @@
 date: '2020/3/3 14:46:25'
 tags:
   - Docker
+  - AWS
 categories:
   - Docker
+  - AWS
 thumbnail: ''
 permalink: ''
 title: Install AWS EC2 Instance and Jupyter Notebook(환경설정) 

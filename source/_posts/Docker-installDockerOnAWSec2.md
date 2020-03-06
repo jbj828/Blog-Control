@@ -2,8 +2,10 @@
 date: '2020/3/3 22:46:25'
 tags:
   - Docker
+  - AWS
 categories:
   - Docker
+  - AWS
 thumbnail: ''
 permalink: ''
 title: Install Docker on AWS EC2 and run the web server through Dockerfile

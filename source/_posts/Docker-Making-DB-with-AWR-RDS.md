@@ -2,8 +2,10 @@
 date: '2020/3/4 15:46:25'
 tags:
   - Docker
+  - AWS
 categories:
   - Docker
+  - AWS
 thumbnail: ''
 permalink: ''
 title: Making DB with AWS RDS
