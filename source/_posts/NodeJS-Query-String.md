@@ -6,7 +6,7 @@ categories:
   - NodeJS
 thumbnail: ''
 permalink: ''
-title: Accessing API from browser
+title: The Query String
 ---
 
 - Query String
