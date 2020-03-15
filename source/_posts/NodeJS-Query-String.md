@@ -9,7 +9,7 @@ permalink: ''
 title: The Query String
 ---
 
-- Query String
+Query String
 
 <!-- more -->
 

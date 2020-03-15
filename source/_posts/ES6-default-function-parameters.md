@@ -9,7 +9,7 @@ permalink: ''
 title: Default Function Parameters
 ---
 
-es6
+default function parameters
 
 <!-- more -->
 
@@ -35,6 +35,6 @@ const transaction = (type, { label, stock = 0 } = {}) => {
 }
 transaction('order')
 ```
+<br>
 
-
-*reference : Udemy 'The Complete Node.js Developer course' by Andrew Mead
+*reference : Udemy 'The Complete Node.js Developer course' by Andrew Mead*
