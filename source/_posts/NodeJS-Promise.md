@@ -163,3 +163,46 @@ getData().then(function(data) {
 ```
 
 위 코드는 서버에서 제대로 응답을 받아오면 resolve() 메서드를 호출하고, 응답이 없으면 reject() 메서드를 호출하는 예제입니다. 호출된 메서드에 따라 then()이나 catch()로 분기하여 응답 결과 또는 오류를 출력합니다.
+
+
+### Promise Chaining
+
+Promise chaining is a syntax that allows you to chain together multiple asychronous tasks in a specific order. This is great for complex code where one asynchronous task needs to be performed after the completion of a different asynchronous task.
+
+With the dummy asychronous function defined, promise chaining can be used to call `add` twice.
+```
+const add = (a, b) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(a + b);
+        }, 2000)
+    })
+}
+
+add(1, 2).then((sum) => {
+    console.log(sum)
+
+    add(sum, 5).then((sum2) => {
+        console.log(sum2)
+    }).catch((e) => {
+        console.log(e)
+    })
+}).catch((e) => {
+    console.log(e)
+})
+```
+
+Promise chaining occurs when the then callback function returns a promise. This allows
+you to chain on another then call which will run when the second promise is fulfilled. catch
+can still be called to handle any errors that might occur along the way.
+
+```
+add(1, 1).then((sum) => {
+    console.log(sum)
+    return add(sum, 4)
+}).then((sum2) => {
+    console.log(sum2)
+}).catch((e) => {
+    console.log(e);
+})
+```
