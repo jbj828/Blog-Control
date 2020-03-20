@@ -50,3 +50,6 @@ aaaaaaaaaaaaaa.bbbbbbbbbbbbbbb.cccccccccccccccc
  header(헤더)      payload(내용)   signature(서명)
 ```
 
+
+출처 : [Veloplert.Log](https://velopert.com/) - 공부목적으로 사용했습니다
+
