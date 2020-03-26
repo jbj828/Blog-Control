@@ -27,5 +27,9 @@ MVVM 패턴의 ViewModel 레이어에 해당하는 화면단 라이브러리
 
 Backend 로직과 Client의 마크업 & 데이터 표현단을 분리하기 위한 구조로 전통적인 MVC 패턴의 방식에서 기인하였다. 간단하게 생각해서 화면 앞단의 화면 동작 관련 로직과 뒷단의 DB 데이터 처리 및 서버 로직을 분리하고, 뒷단에서 넘어온 데이터를 Model에 담아 View로 넘겨주는 중간 지점이라고 보면 된다.
 
+#### Steps for Passing Props
+
+  1. Add the prop to the parent component's template with a v-bind expression
+  2. Tell the child component about the props it should expect to get
 
 출처 : [Captain Pangyo](https://joshua1988.github.io/)
