@@ -42,3 +42,9 @@ Vuex는 Vue 애플리케이션에서 Flux 아키텍처를 구현하는 데 도�
 Vuex를 구현하기 위해서는 store, mutators 가 포함되며 store에서 데이터를 읽는 모든 컴포넌트를 자동으로 업데이트한다. 
 
 또한 핫 모듈 리로딩(실행 중인 애플리케이션에서 모듈 업데이트) 및 시간 이동 디버깅(버그 추적을 위한 mutation 이벤트 역추적)과 같은 멋진 개발 기능을 제공한다.
+
+
+{% asset_img "vuex.png" 500 300 "Vuex" %}
+
+
+*출처 : [도대체 Vuex가 뭐길래?](https://medium.com/@itsnothingg/%EB%8F%84%EB%8C%80%EC%B2%B4-vuex%EA%B0%80-%EB%AD%90%EA%B8%B8%EB%9E%98-ad5bc15f2371)*
