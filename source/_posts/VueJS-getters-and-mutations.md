@@ -174,5 +174,8 @@ mutations : {
 데이터 인자 명은 보통 `payload`를 많이 쓴다.
 
 
+- 변경 된 state 값을 받아오는 **Getters**
+- state 값을 변경하기 위한 메서드를 정의하는 **Mutations**
+
 
 출처 : [Captain Pangyo](https://joshua1988.github.io/web-development/vuejs/vuex-getters-mutations/)
