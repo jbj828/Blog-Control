@@ -26,6 +26,8 @@ Sorting refers to arranging data in a particular format : either ascending or de
 
 ### In-Place vs Out-Place Sorting
 
+입력리스트 내부에서 정렬이 이뤄지는 경우를 가리킵니다. 반대는 정렬 도중에 별도 저장공간을 필요로 하는 경우입니다. 합병정렬의 경우 입력리스트를 분할해 이를 정렬하고 다시 합치는 과정에서 분할된 리스트를 별도로 저장해 두어야 합니다. 카운팅정렬과 래딕스정렬은 입력값의 빈도를 세어서 저장해 두는 변수, 결과리스트를 저장해 둘 변수가 필요합니다. 버킷정렬은 버킷이라는 변수를 만들 공간이 있어야 합니다.
+
 ##### In-Place Sort:
 
   * Sorting algorithms which does not require any extra space for sorting.
