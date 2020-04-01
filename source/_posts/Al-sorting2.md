@@ -81,6 +81,10 @@ Sorting refers to arranging data in a particular format : either ascending or de
     * If the successive element is greater than or equals to its previous element in the sequence. This order occurs when the sequence contains duplicate values.
     * ex) 1,3,3,6,8,9
 
+
+### Sorting Algorithms Compared
+
+{% asset_img "compareSort.PNG" 500 500 "Compare Sorting Algorithms" %}
 <br>
 
 

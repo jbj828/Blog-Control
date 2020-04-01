@@ -26,7 +26,7 @@ quick sort
   * Time Complexity - O(n log n)
   * Space Complexity - O(n) : system이 모든 요소를 stack에 넣고 pop 할 경우
 
-### When to Use/Avoid Merge Sort
+### When to Use/Avoid Quick Sort
 
   * When to use:
     * When average expected time is O(n log n)
@@ -35,12 +35,46 @@ quick sort
     * When space is a concern like embedded systems
     * When stable sort is required
 
+### Coding Quick Sort on Javascript
 
+```
+function pivot(arr, start=0, end=arr.length-1){
+  function swap(array, i, j) {
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+
+  var pivot = arr[start];
+  var swapIdx = start;
+
+  for(var i = start + 1; i < arr.length; i++){
+    if(pivot > arr[i]){
+      swapIdx++;
+      swap(arr,swapIdx,i);
+    }
+  }
+  swap(arr,start,swapIdx);
+  return swapIdx;
+}
+
+
+function quickSort(arr, left=0, right=arr.length-1){
+  if(left < right){
+    let pivotIndex = pivot(arr, left, right);
+    //left
+    quickSort(arr, left, pivotIndex-1);
+    //right
+    quickSort(arr, pivotIndex+1, right);
+  }
+  return arr;
+}
+```
 
 
 
 출처 : "Data Structures & Algorithms" by DS GUY
 
 
-{% asset_img "jsp-session-study.png" 500 300 "title" %}
+
 
