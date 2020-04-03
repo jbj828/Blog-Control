@@ -132,7 +132,3 @@ graph.Dijkstra("A", "E");
 ```
 
 
-
-
-
-{% asset_img "jsp-session-study.png" 500 300 "title" %}
