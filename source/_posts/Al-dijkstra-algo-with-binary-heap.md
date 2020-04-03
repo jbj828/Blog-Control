@@ -1,51 +1,19 @@
 ---
-date: '2020/4/3 13:30:25'
+date: '2020/4/3 18:30:25'
 tags:
   - algorithm
 categories:
   - Algorithm
 thumbnail: ''
 permalink: ''
-title: Dijkstra's Algorithm
+title: Dijkstra's Algorithm with Binary Heap(Complete Priority Queue)
 ---
 
-Dijkstra's Algorithm
+Dijkstra's Algorithm with Binary Heap
 
 <!-- more -->
 
-### What is it?
-
-  * One of the most famous and widely used algorithms around.
-  * Finds the shortest path between two vertices on a graph
-  * "What's the fastest way to get from point A to point B?"
-
-### Why is it useful?
-
-  * GPS - finding fastest route
-  * Networking Routing - finds open shortest path for data
-  * Biology - used to model the spread of viruses among humans
-  * Airline tickets - finding cheapest route to your destination
-  * Many other uses!
-
-### Dijkstra algorithm with Priority Queue(Naive version)
-
 ```
-class PriorityQueue {
-  constructor(){
-    this.values = [];
-  }
-  enqueue(val, priority) {
-    this.values.push({val, priority});
-    this.sort();
-  };
-  dequeue() {
-    return this.values.shift();
-  };
-  sort() {
-    this.values.sort((a, b) => a.priority - b.priority);
-  };
-}
-
 class WeightedGraph {
     constructor() {
         this.adjacencyList = {};
@@ -108,6 +76,76 @@ class WeightedGraph {
     }
 }
 
+class PriorityQueue {
+    constructor(){
+        this.values = [];
+    }
+    enqueue(val, priority){
+        let newNode = new Node(val, priority);
+        this.values.push(newNode);
+        this.bubbleUp();
+    }
+    bubbleUp(){
+        let idx = this.values.length - 1;
+        const element = this.values[idx];
+        while(idx > 0){
+            let parentIdx = Math.floor((idx - 1)/2);
+            let parent = this.values[parentIdx];
+            if(element.priority >= parent.priority) break;
+            this.values[parentIdx] = element;
+            this.values[idx] = parent;
+            idx = parentIdx;
+        }
+    }
+    dequeue(){
+        const min = this.values[0];
+        const end = this.values.pop();
+        if(this.values.length > 0){
+            this.values[0] = end;
+            this.sinkDown();
+        }
+        return min;
+    }
+    sinkDown(){
+        let idx = 0;
+        const length = this.values.length;
+        const element = this.values[0];
+        while(true){
+            let leftChildIdx = 2 * idx + 1;
+            let rightChildIdx = 2 * idx + 2;
+            let leftChild,rightChild;
+            let swap = null;
+
+            if(leftChildIdx < length){
+                leftChild = this.values[leftChildIdx];
+                if(leftChild.priority < element.priority) {
+                    swap = leftChildIdx;
+                }
+            }
+            if(rightChildIdx < length){
+                rightChild = this.values[rightChildIdx];
+                if(
+                    (swap === null && rightChild.priority < element.priority) || 
+                    (swap !== null && rightChild.priority < leftChild.priority)
+                ) {
+                   swap = rightChildIdx;
+                }
+            }
+            if(swap === null) break;
+            this.values[idx] = this.values[swap];
+            this.values[swap] = element;
+            idx = swap;
+        }
+    }
+}
+
+class Node {
+    constructor(val, priority){
+        this.val = val;
+        this.priority = priority;
+    }
+}
+
 var graph = new WeightedGraph()
 graph.addVertex("A");
 graph.addVertex("B");
@@ -127,8 +165,8 @@ graph.addEdge("E","F", 1);
 
 
 graph.Dijkstra("A", "E");
-
-// ["A", "C", "D", "F", "E"]
 ```
+
+
 
 
