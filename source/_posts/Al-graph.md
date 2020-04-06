@@ -33,18 +33,19 @@ graph
 
 <Br>
 
-{% asset_img "graph.png" 500 500 "Types of Graph" %}
+
+{% asset_img "graph.PNG" 500 500 "Types of Graph" %}
 
 
 ### How is Graph represented?
 
   1. **Adjacency Matrix** : In graph theory, an adjacency matrix is a square matrix used to represent a finite graph. The elements of the matrix indicate whether pairs of vertices are adjacent or not in the graph.
 
-  {% asset_img "adjacencyMatrix.png" 400 400 "adjacency matrix" %}
+  {% asset_img "adjacencyMatrix.PNG" 400 400 "adjacency matrix" %}
 
   2. **Adjacency List** : In graph theory, an adjacency list is a collection of unordered lists used to represent a finite graph. Each list describes the set of neighbors of a vertex in the graph.
 
-  {% asset_img "adjacencyList.png" 400 400 "adjacency list" %}
+{% asset_img "adjacencyList.PNG" 400 400 "adjacency list" %}
 
 
 ##### When to use which representation?
