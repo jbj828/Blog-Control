@@ -153,3 +153,11 @@ function solution(num, count = 0) {
         solution(num % 2 == 0 ? num / 2 : num * 3 + 1, ++count)
 }
 ```
+
+### 평균 구하기
+
+```
+function solution(arr){
+    return arr.reduce((a,b) => a+b) / arr.length
+}
+```
