@@ -1,15 +1,15 @@
 ---
-date: '2020/4/12 18:30:25'
+date: '2020/4/14 18:30:25'
 tags:
   - Coding Test
 categories:
   - Coding Test
 thumbnail: ''
 permalink: ''
-title: Coding Test Level1 - Day5
+title: Coding Test Level1 - Day5, 6
 ---
 
-Coding Test Level1 - Day5
+Coding Test Level1 - Day5, 6
 
 <!-- more -->
 
@@ -51,5 +51,15 @@ function solution(A, B) {
 arr.map(callback(currentValue[, index[, array]])[,thisArg])
 ```
 
+### Summer/Windter Coding(~2018)
 
+```
+function solution(d, budget) {
+    d.sort((a, b) => a - b)
+
+    while (d.reduce((a, b) => (a + b), 0) > budget) d.pop()
+
+    return d.length
+}
+```
 
