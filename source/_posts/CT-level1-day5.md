@@ -63,3 +63,70 @@ function solution(d, budget) {
 }
 ```
 
+### 완주하지 못한 선수
+
+```
+function solution(participant, completion) {
+    participant.sort()
+    completion.sort()
+
+    for(let i in participant){
+        if(participant[i] !== completion[i]) return participant[i]
+    }
+}
+```
+
+### 모의고사
+
+```
+function solution(answers) {
+    let answer = []
+    const a1 = [1, 2, 3, 4, 5]
+    const a2 = [2, 1, 2, 3, 2, 4, 2, 5]
+    const a3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
+
+    let a1c = anwsers.filter((a, i) => a === a1[i % a1.length]).length
+    let a2c = anwsers.filter((a, i) => a === a2[i % a2.length]).length
+    let a3c = anwsers.filter((a, i) => a === a3[i % a3.length]).length
+
+    const max = Math.max(a1c, a2c, a3c)
+
+    if (a1c === max) answer.push(1)
+    if (a2c === max) answer.push(2)
+    if (a3c === max) answer.push(3)
+
+    return answer
+}
+```
+
+### 체육복
+
+```
+function solution(n, lost, reserve) {
+    let answer = n;
+
+    for (let i = 0; i < reserve.length; i++) {
+        if (lost.includes(reserve[i])) {
+            lost.splice(lost.indexOf(reserve[i]), 1)
+            reserve.splice(i, 1)
+            i--
+        }
+    }
+
+    for (let i = 0; i < reserve.length; i++) {
+        if (lost.includes(reserve[i] - 1)) {
+            lost.splice(lost.indexOf(reserve[i] - 1), 1)
+            reserve.splice(i, 1)
+            i--;
+        } else if (lost.includes(reserve[i] + 1)) {
+            lost.splice(lost.indexOf(reserve[i] + 1), 1)
+            reserve.splice(i, 1)
+            i--
+        }
+    }
+
+    answer = n - lost.length;
+    return answer
+}
+```
+
