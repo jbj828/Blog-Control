@@ -6,7 +6,7 @@ categories:
   - Coding Test
 thumbnail: ''
 permalink: ''
-title: Coding Test - Level 2
+title: Coding Test - Level2 / Day1
 ---
 
 Coding Test - Level 2
@@ -14,7 +14,7 @@ Coding Test - Level 2
 <!-- more -->
 
 
-### 백준 그리디 알고리즘 1번 문제
+### 백준 그리디 알고리즘 1번 문제(Greedy)
 
 ```
 function atm(n, time) {
@@ -31,7 +31,7 @@ function atm(n, time) {
 }
 ```
 
-### 탑
+### 탑(Queue)
 
 ```
 function solution(heights){
@@ -47,3 +47,30 @@ function solution(heights){
 }
 ```
 
+### 프린터(Queue)
+
+```
+function solution(priorities, location) {
+    var arr = priorities.map((priority, index) => {
+        return {
+            index: index,
+            priority: priority
+        }
+    })
+
+    var queue = []
+
+    while (arr.length > 0) {
+        var firstEle = arr.shift()
+        var hasHigherElement = arr.some(ele => ele.priority > firstEle.priority)
+
+        if (hasHigherElement) {
+            arr.push(firstEle)
+        } else {
+            queue.push(firstEle)
+        }
+    }
+
+    return queue.findIndex(queueEle => queueEle.index === location) + 1
+}
+```
