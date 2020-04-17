@@ -76,4 +76,33 @@ function makeArrayConsecutive2(statues) {
 }
 ```
 
+### almostIncreasingSequence
+
+```
+function almostIncreasingSequence(seq) {
+    var bad = 0
+    for (var i = 1; i < seq.length; i++) if (seq[i] <= seq[i - 1]) {
+        bad++
+        if (bad > 1) return false
+        if (seq[i] <= seq[i - 2] && seq[i + 1] <= seq[i - 1]) return false
+    }
+    return true
+}
+```
+
+### matrixElementsSum
+
+```
+function matrixElementsSum(matrix) {
+    var total = 0;
+
+    for (j = 0; j < matrix[0].length; j++) {
+        for (var i = 0; i < matrix.length; i++) {
+            if (matrix[i][j] === 0) break
+            else total += matrix[i][j]
+        }
+    }
+    return total
+}
+```
 
