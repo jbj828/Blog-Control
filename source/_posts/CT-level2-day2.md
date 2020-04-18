@@ -6,7 +6,7 @@ categories:
   - Coding Test
 thumbnail: ''
 permalink: ''
-title: Coding Test - Code Signal
+title: Coding Test - Code Signal Intro 1
 ---
 
 Coding Test 

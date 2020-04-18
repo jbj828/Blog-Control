@@ -6,7 +6,7 @@ categories:
   - Coding Test
 thumbnail: ''
 permalink: ''
-title: Coding Test - Code Signal Intro2
+title: Coding Test - Code Signal Intro 2
 ---
 
 Coding Test - Code Signal Intro2
@@ -73,5 +73,24 @@ function reverseInParentheses(inputString) {
         inputString = inputString.replace(/\(([^()]*)\)/, (_, str) => [...str].reverse().join(''));
     }
     return inputString;
+}
+```
+
+### alternatingSums
+
+```
+function alternatingSums(a) {
+    let teamA = []
+    let teamB = []
+    let result = []
+
+    teamA = a.filter((e, i) => i % 2 === 0)
+    teamB = a.filter((e, i) => i % 2 === 1)
+
+
+    result.push(teamA.reduce((a, b) => a + b , 0))
+    result.push(teamB.reduce((a, b) => a + b , 0))
+
+    return result
 }
 ```
